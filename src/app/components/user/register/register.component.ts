@@ -44,11 +44,11 @@ modal.result.then(
   }
 
   createUser() {
-    // this.afAuth.auth.createUserWithEmailAndPassword(this.registerForm.value.email, this.registerForm.value.password)
-    // .then(() => {
-    //    this.router.navigate(['/home']);
-    //  }).catch(response => {
-    //    this.errorMessage = response.message;
-    //  });
+    this.afAuth.auth.createUserWithEmailAndPassword(this.registerForm.value.email, this.registerForm.value.password)
+    .then(() => {
+       this.router.navigate(['/home']);
+     }).catch(response => {
+       this.errorMessage = response.message;
+     });
     }
 }

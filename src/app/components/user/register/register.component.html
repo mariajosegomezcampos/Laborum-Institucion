@@ -1,4 +1,7 @@
-
+<div class="login-screen">
+    <div className="login-box-left">
+    <img src='../../../../assets/img/Logo.png' alt='' class="login-logo" />
+    <h1 className="login-h1">Conecta con tus postulantes con las mejores ofertas</h1>
  <form [formGroup]="registerForm">
     <h2>Registrarse</h2>
      <div class="form-group">
@@ -36,6 +39,9 @@
 
      <button class="btn-login" (click)="createUser()" [disabled]="registerForm.invalid">Comenzar</button>
      </div>
-     
    </form>
+   <div className="section-7">
+      <h6 class="h6">Ya tienes cuenta</h6>
+      <a class="link-login" routerLink='/login'>Iniciar sesion</a>
+   </div>
   

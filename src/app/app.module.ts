@@ -23,8 +23,6 @@ import { NavBarComponent } from './components/shared/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { SelectComponent } from './components/user/select/select.component';
-import { ContenedorLoginComponent } from './components/user/contenedor-login/contenedor-login.component';
-import { ContenedorRegisterComponent } from './components/user/contenedor-register/contenedor-register.component';
 
 
 //firebase
@@ -51,8 +49,6 @@ import { ModalComponent } from './components/modal/modal.component';
     FooterComponent,
     HeaderComponent,
     SelectComponent,
-    ContenedorLoginComponent,
-    ContenedorRegisterComponent,
     ModalComponent,
 
   ],

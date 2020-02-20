@@ -1,6 +1,10 @@
-
+<div class="login-screen">
+    <div className="login-box-left">
+    <img src='../../../../assets/img/Logo.png' alt='' class="login-logo" />
+    <h1 className="login-h1">Conecta con tus postulantes con las mejores ofertas</h1>
 <div class="login-container">
   <h3 class="login-h3">Iniciar sesion</h3>
+  </div>
  <form [formGroup]="loginForm">
   <div class="form-group">
     <label for="email">Correo</label>
@@ -12,17 +16,23 @@
     <input id="password" type="password" placeholder="Contraseña" class="input-login" formControlName="password" />
 </div>
   <div class="section-6">
-    <input type="checkbox" class="form-check-input"formControlName="remember" class="rememberMe">
+    <input type="checkbox" class=""formControlName="remember" class="rememberMe">
     <label class="h6" for="promociones">Recuerdame</label>
     <h6 className="h6-1"><a routerLink="" class="link-login">¿Olvidaste tu contraseña?</a></h6>
   </div>
   <div class="form-group">
-      <button class="btn-login" (click)="signIn()" [disabled]="loginForm.invalid"></button>
+      <button class="btn-login" (click)="signIn()" [disabled]="loginForm.invalid">Ineciar Sesion</button>
   </div>
+
 </form>
-</div> 
-<P>ESTO ES LOGIN</P>
-  
+<div className="section-7">
+    <h6 class="h6">¿No tienes cuenta?</h6>
+    <a class="link-login" routerLink='/register'type="button">Registrate</a>
+</div>
+</div>
+
+
+
 
 
 
