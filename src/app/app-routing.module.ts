@@ -11,6 +11,7 @@ import { RegisterComponent } from './components/user/register/register.component
 import { ProfileComponent } from './components/profile/profile.component';
 import { LinkCompaniesComponent } from './components/link-companies/link-companies.component';
 import { PostulantsComponent } from './components/postulants/postulants.component';
+import  { ProfileContComponent } from './components/profile/profile-cont/profile-cont.component'
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'gestionavisos', component:  ManagementVacanciesComponent },
   { path: 'vinculacionempresa', component:  LinkCompaniesComponent },
   { path: 'postulantes', component:  PostulantsComponent },
+  { path: 'profilecont', component: ProfileContComponent },
 
 >>>>>>> 47b1ef15bfba49cdbad7ae41b78dd449a290ab16
 

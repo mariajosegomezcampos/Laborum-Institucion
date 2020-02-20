@@ -3,8 +3,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 /**** Formulario ****/ 
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 //servicio
 import { AuthService } from './services/auth.service';
@@ -36,6 +35,7 @@ import { AngularFireStorageModule }  from '@angular/fire/storage';
 
 // environment config
 import{ environment } from '../environments/environment';
+import { ProfileContComponent } from './components/profile/profile-cont/profile-cont.component';
 
 @NgModule({
   declarations:[
@@ -53,6 +53,7 @@ import{ environment } from '../environments/environment';
     NavBarComponent,
     FooterComponent,
     HeaderComponent,
+    ProfileContComponent,
   ],
   imports: [
     BrowserModule,
