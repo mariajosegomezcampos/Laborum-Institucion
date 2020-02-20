@@ -35,6 +35,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 // environment config
 import{ environment } from '../environments/environment';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations:[
@@ -52,6 +53,7 @@ import{ environment } from '../environments/environment';
     SelectComponent,
     ContenedorLoginComponent,
     ContenedorRegisterComponent,
+    ModalComponent,
 
   ],
   imports: [
@@ -70,6 +72,7 @@ import{ environment } from '../environments/environment';
     FooterComponent,
     HeaderComponent,
   ],
+  entryComponents: [ ModalComponent],
 
 
 

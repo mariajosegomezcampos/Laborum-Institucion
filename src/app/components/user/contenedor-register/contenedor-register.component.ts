@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-contenedor-register',
   templateUrl: './contenedor-register.component.html',

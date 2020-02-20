@@ -11,21 +11,11 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-get email(){
-  return this.loginForm.get('email');
-}
-get password() {
-  return this.loginForm.get('password');
-}
   errorMessage = '';
+  loginForm: any;
 
   constructor(private afAuth: AngularFireAuth, private router: Router, private fb: FormBuilder, private ngZone: NgZone) { }
 
-  loginForm = this.fb.group({
-    email: ['', Validators.required],
-    password: ['', {   validators: [Validators.required, Validators.minLength(4)] }],
-    remember: [true]
-  })
 
  ngOnInit() {
    this.afAuth.user.subscribe(user => {
@@ -41,7 +31,7 @@ get password() {
 signIn() { 
  this.afAuth.auth.signInWithEmailAndPassword(this.loginForm.value.email, this.loginForm.value.password)
  .then(() => {
-    this.router.navigate(['/home']);
+    // this.router.navigate(['/home']);
   }).catch(response => {
     this.errorMessage = response.message;
   });
