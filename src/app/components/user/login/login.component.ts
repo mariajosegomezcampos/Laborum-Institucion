@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
 signIn() { 
  this.afAuth.auth.signInWithEmailAndPassword(this.loginForm.value.email, this.loginForm.value.password)
  .then(() => {
-    // this.router.navigate(['/home']);
+   this.router.navigate(['/home']);
   }).catch(response => {
     this.errorMessage = response.message;
   });

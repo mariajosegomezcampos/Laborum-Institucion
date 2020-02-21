@@ -36,6 +36,12 @@ get password() {
   }
 
 showModal(){
+  this.afAuth.auth.createUserWithEmailAndPassword(this.registerForm.value.email, this.registerForm.value.password)
+  .then(() => {
+     this.router.navigate(['/home']);
+   }).catch(response => {
+     this.errorMessage = response.message;
+   });
 const modal = this.modalServices.open(ModalComponent);
 modal.result.then(
   this.handleModalModalClose.bind(this),
@@ -44,11 +50,6 @@ modal.result.then(
   }
 
   createUser() {
-    this.afAuth.auth.createUserWithEmailAndPassword(this.registerForm.value.email, this.registerForm.value.password)
-    .then(() => {
-       this.router.navigate(['/home']);
-     }).catch(response => {
-       this.errorMessage = response.message;
-     });
+ 
     }
 }

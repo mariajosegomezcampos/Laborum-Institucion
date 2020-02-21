@@ -19,10 +19,10 @@ body {
 /* Select */
 
 .login-photo {
-    background-image: url('/../../assets/img/imgSelect.png');
+    background-image: url('../../../Desktop/Laborum-Institucion/src/assets/img/imgSelect.png');
     height: 765px;
     background-color: #EBFAF4 ;
-    top: 0px;
+    top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
