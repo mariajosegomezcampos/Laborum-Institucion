@@ -1,23 +1,15 @@
 {
-  "hosting": {
-    "public": "dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-<<<<<<< HEAD
-  },
-  "firestore": {
-    "rules": "n",
-    "indexes": "y"
-=======
->>>>>>> 47b1ef15bfba49cdbad7ae41b78dd449a290ab16
-  }
+    "hosting": {
+        "site": "laborum-institucion-angular",
+        "public": "public",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ]
+    },
+    "firestore": {
+        "rules": "n",
+        "indexes": "y"
+    }
 }
