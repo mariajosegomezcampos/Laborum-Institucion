@@ -35,10 +35,8 @@ this.jobVacanCollection = afs.collection<jobVacanciesMoldels>('newJobAnnouncemen
   }))
 );
 
-
 }
 
-}
 
      ////////////////////////////////////////////////////////////////
   /////////////////FUNCION QUE RETORNA TODA LA DATA DE AVISOS///////////////
