@@ -1,10 +1,10 @@
-
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-//servicios
+
+//servicio
 import { AuthService } from './services/auth.service';
 
 //Rutas
@@ -23,7 +23,7 @@ import { NavBarComponent } from './components/shared/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { SelectComponent } from './components/user/select/select.component';
-
+import { ProfileContComponent } from './components/profile/profile-cont/profile-cont.component';
 
 //firebase
 import { AngularFireModule } from '@angular/fire'; // Firebase config
@@ -34,6 +34,21 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 // environment config
 import{ environment } from '../environments/environment';
 import { ModalComponent } from './components/modal/modal.component';
+
+
+//Modulos de firebase
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule }  from '@angular/fire/storage';
+
+
+
+// environment config
+import{ environment } from '../environments/environment';
+
+
 
 @NgModule({
   declarations:[
@@ -50,28 +65,26 @@ import { ModalComponent } from './components/modal/modal.component';
     HeaderComponent,
     SelectComponent,
     ModalComponent,
-
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     NgbModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),// Import firebase
-    AngularFireAuthModule,
-    AngularFirestoreModule, // Import firestore
-    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule, 
+    AngularFirestoreModule,  // Necesario para las funciones de base de datos
+    AngularFireStorageModule // Necesario para las funciones de almacenamiento de imagenes
   ],
   providers: [ 
     AngularFireAuth,
     AuthService ,
-    NavBarComponent,
-    FooterComponent,
-    HeaderComponent,
   ],
   entryComponents: [ ModalComponent],
-
-
-
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA],
+  providers: [
+   AngularFireAuth,
+   AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
